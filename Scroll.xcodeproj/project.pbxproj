@@ -14,6 +14,8 @@
 		FDF317E5286CD01A00BC87AD /* ScrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF317E4286CD01A00BC87AD /* ScrollTests.swift */; };
 		FDF317EF286CD01A00BC87AD /* ScrollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF317EE286CD01A00BC87AD /* ScrollUITests.swift */; };
 		FDF317F1286CD01A00BC87AD /* ScrollUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF317F0286CD01A00BC87AD /* ScrollUITestsLaunchTests.swift */; };
+		FDF317FE286CF3A600BC87AD /* ClipPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF317FD286CF3A600BC87AD /* ClipPlayer.swift */; };
+		FDF31801286DFCD500BC87AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FDF31800286DFCD500BC87AD /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		FDF317EA286CD01A00BC87AD /* ScrollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF317EE286CD01A00BC87AD /* ScrollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollUITests.swift; sourceTree = "<group>"; };
 		FDF317F0286CD01A00BC87AD /* ScrollUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDF317FD286CF3A600BC87AD /* ClipPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF31801286DFCD500BC87AD /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			children = (
 				FDF317D3286CD01500BC87AD /* ScrollApp.swift */,
 				FDF317D5286CD01500BC87AD /* ContentView.swift */,
+				FDF317FD286CF3A600BC87AD /* ClipPlayer.swift */,
 				FDF317D7286CD01900BC87AD /* Assets.xcassets */,
 				FDF317D9286CD01900BC87AD /* Preview Content */,
 			);
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = Scroll;
+			packageProductDependencies = (
+				FDF31800286DFCD500BC87AD /* SDWebImageSwiftUI */,
+			);
 			productName = Scroll;
 			productReference = FDF317D0286CD01500BC87AD /* Scroll.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = FDF317C7286CD01400BC87AD;
+			packageReferences = (
+				FDF317FF286DFCD500BC87AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FDF317D1286CD01500BC87AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF317D6286CD01500BC87AD /* ContentView.swift in Sources */,
+				FDF317FE286CF3A600BC87AD /* ClipPlayer.swift in Sources */,
 				FDF317D4286CD01500BC87AD /* ScrollApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDF317FF286DFCD500BC87AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDF31800286DFCD500BC87AD /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDF317FF286DFCD500BC87AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDF317C8286CD01400BC87AD /* Project object */;
 }
